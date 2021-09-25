@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-09-24T23:55:27-04:00",
+  "id": "gdg-html-presentation",
+  "duration": 33,
+  "title": "Building the HTML Infrastucture of Tic-Tic-Toe",
+  "authors": "Tanush Mittal",
+  "summary": "Introduction to HTML",
+  "source": "gdg-html-presentation.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "sample"
+  ],
+  "tags": [
+    "medium"
+  ],
+  "url": "gdg-html-presentation"
+}

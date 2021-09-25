@@ -1,0 +1,300 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Building the HTML Infrastucture of Tic-Tic-Toe</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="gdg-html-presentation"
+                  title="Building the HTML Infrastucture of Tic-Tic-Toe"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Final Product and Overwiew" duration="2">
+        <h2 is-upgraded>Link</h2>
+<p><a href="https://tmitt8.github.io/TIc_Tac_Toe/" target="_blank">Here&#39;s The Link to the Tic-Tac-Toe</a></p>
+<h2 class="checklist" is-upgraded>What You&#39;ll Learn</h2>
+<ul class="checklist">
+<li>The basics of HTML</li>
+<li>How to build the frame of a game</li>
+<li>Using different tags in your code</li>
+<li>Different features and functionalities of HTML</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Starting our HTML File" duration="7">
+        <p>The first thing you want to put on your HTML file is &lt;&#39;!DOCTYPE html&#39;&gt;. This will declare the document type and tells the browser how to render the web page. Next you want to add &lt;‘html&#39;&gt;,&lt;‘head&#39;&gt;, and &lt;‘body&#39;&gt; tags underneath. Tags should be closed with &lt;&#39;/element&#39;&gt; for every element We also want to add a title inside the &lt;‘head&#39;&gt; container like this: &lt;‘title&#39;&gt;Tic-Tac-Toe&lt;&#39;/title&#39;&gt; In the future, the head will also include links to our CSS and JS files, but we&#39;ll add those when we need them</p>
+<p>Your file should look like this so far:</p>
+<pre><code language="language-html" class="language-html">{
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+
+  &lt;head&gt;
+    &lt;title&gt;Tic-Tac-Toe&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+  &lt;/body&gt;
+  &lt;/html&gt;
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Tags, Ids, and Starting the Body" duration="7">
+        <h2 is-upgraded>Using Text Tags</h2>
+<p>HTML offers many different styles of text you can use to organize your webpage and make it look nicer.</p>
+<ul>
+<li>There are 6 different heading tags, labeled &lt;‘h1&#39;&gt;, &lt;‘h2&#39;&gt;, &lt;‘h3&#39;&gt;, up to &lt;‘h6&#39;&gt;.</li>
+<li>There&#39;s a normal text or paragraph tag labeled &lt;‘p&#39;&gt;</li>
+<li>There&#39;s a tag for hyperlinks labeled &lt;‘a href = &#34;somelink.com&#39;&gt;, where you would put the link after &#34;href&#34; <img alt="Picture of different text" src="img/139d605b3a4d13a2.jpeg"></li>
+</ul>
+<p>In this situation, I&#39;ll be using an h1 tag and h5 tag, but you can choose which tags you want to use if you feel a different tag looks better.</p>
+<p>At the top of the body tag I have the name and some directions:</p>
+<pre><code language="language-html" class="language-html">{
+  &lt;h1&gt; Tic Tac Toe!&lt;/h1&gt;
+  &lt;h5&gt; You will be playing as X. To place an X, click on the tile you want to choose.&lt;/h5&gt;
+}
+</code></pre>
+<h2 is-upgraded>Using Ids and Classes</h2>
+<p>Ids and Classes are incredibly important to add to HTML elements because they help in the future when you want to reference certain elements of your webpage either to improve the style, change the text, add a child, and many other functions. They&#39;ll be especially useful when we implement CSS and Javascript in the future.</p>
+<ul>
+<li>I&#39;m going to add some descriptive ids to my tags:</li>
+</ul>
+<pre><code language="language-html" class="language-html">{
+ &lt;h1 id=&#34;title&#34;&gt; Tic Tac Toe&lt;/h1&gt;
+ &lt;h5 id = &#34;directions&#34;&gt; You will be playing as X. To place an X, click on the tile you want to choose.&lt;/h5&gt;
+}
+</code></pre>
+<h2 is-upgraded>Using Div</h2>
+<p>The div tag acts as division between different sections of your webpage. Suppose you only want a certain part of your project to be referenced or styled in a different way than the rest of the body. The div tag allows you to do that. I&#39;m going to add a div tag to store all the rest of our code.</p>
+<p>Your code should look similar to this:</p>
+<pre><code language="language-html" class="language-html">{
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+
+  &lt;head&gt;
+    &lt;title&gt;Tic-Tac-Toe&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1 id=&#34;title&#34;&gt; Tic Tac Toe!&lt;/h1&gt;
+    &lt;h5 id = &#34;directions&#34;&gt; You will be playing as X. To place an X, click on the tile you want to choose.&lt;/h5&gt;
+    &lt;div id = &#34;enclosed&#34;&gt;
+
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Adding the Win-Loss-Tie Counter and Reset Button" duration="5">
+        <p>We&#39;re gonna start with the Win-Loss-Tie Counter.</p>
+<ul>
+<li>First, create another div tag to put this section in</li>
+<li>Then, use the p tags to create 3 lines of text each representing wins, losses, or ties. Each should start at 0</li>
+</ul>
+<pre><code language="language-html" class="language-html">{
+ &lt;p id=&#34;wins&#34;&gt;Wins: 0&lt;/p&gt;
+ &lt;p id=&#34;losses&#34;&gt;Losses: 0&lt;/p&gt;
+ &lt;p id=&#34;ties&#34;&gt;Ties: 0&lt;/p&gt;
+}
+</code></pre>
+<p>Then we&#39;re going to use a new tag called button, which creates a button element, to make the reset button. Buttons are useful because they can later be used to execute certain actions when clicked.</p>
+<pre><code language="language-html" class="language-html">{
+ &lt;button id=&#34;reset&#34;&gt;Reset&lt;/button&gt;
+}
+</code></pre>
+<p>Your code should now look like this:</p>
+<pre><code language="language-html" class="language-html">{
+    &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+
+  &lt;head&gt;
+    &lt;title&gt;Tic-Tac-Toe&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1 id=&#34;title&#34;&gt; Tic Tac Toe!&lt;/h1&gt;
+    &lt;h5 id = &#34;directions&#34;&gt; You will be playing as X. To place an X, click on the tile you want to choose.&lt;/h5&gt;
+    &lt;div id = &#34;enclosed&#34;&gt;
+      &lt;div id=&#34;results&#34;&gt;
+            &lt;p id=&#34;wins&#34;&gt;Wins: 0&lt;/p&gt;
+            &lt;p id=&#34;losses&#34;&gt;Losses: 0&lt;/p&gt;
+            &lt;p id=&#34;ties&#34;&gt;Ties: 0&lt;/p&gt;
+            &lt;button id=&#34;reset&#34;&gt;Reset&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Creating the Tic-Tac-Toe Board with The table tag" duration="8">
+        <p>We&#39;re now going to create the main tic-tac-toe board using the &lt;‘table&#39;&gt; tag.</p>
+<ul>
+<li>The table tag allows us to make tables for many purposes, such as to display data, organize items, or in our case, act as a great Tic-Tac-Toe board!</li>
+<li>To make our tables, we use &lt;‘tr&#39;&gt; to add new rows to our table, and &lt;‘td&#39;&gt; to add different cells of data to the row.</li>
+<li>To make the Tic-Tac-Toe board, we need a 3x3 table, and we want to put a button in each cell.</li>
+<li>The button is there so that in the future, we can use it to put the X&#39;s and O&#39;s in each cell.</li>
+<li>First, I&#39;m gonna create a div tag to contain the whole table</li>
+<li>I&#39;m going to assign some ids and classes for the future:</li>
+</ul>
+<pre><code language="language-html" class="language-html">{
+  &lt;div id=&#34;background&#34;&gt;
+       &lt;table id=&#34;table&#34;&gt;
+           &lt;tr id = &#34;r1&#34;&gt;
+               &lt;td class = &#34;c1&#34;&gt;
+                   &lt;button id= &#34;r1c1&#34;&gt; &lt;/button&gt;
+               &lt;/td&gt;
+               &lt;td class = &#34;c2&#34;&gt;
+                   &lt;button id= &#34;r1c2&#34;&gt; &lt;/button&gt;
+               &lt;/td&gt;
+               &lt;td class = &#34;c3&#34;&gt;
+                   &lt;button id= &#34;r1c3&#34; &gt; &lt;/button&gt;
+               &lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr id = &#34;r2&#34;&gt;
+               &lt;td class = &#34;c1&#34;&gt;
+                   &lt;button id= &#34;r2c1&#34;&gt; &lt;/button&gt;
+               &lt;/td&gt;
+               &lt;td class = &#34;c2&#34;&gt;
+                   &lt;button id= &#34;r2c2&#34; &gt; &lt;/button&gt;
+               &lt;/td&gt;
+               &lt;td class = &#34;c3&#34;&gt;
+                   &lt;button id= &#34;r2c3&#34;&gt; &lt;/button&gt;
+               &lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr id = &#34;r3&#34;&gt;
+               &lt;td class = &#34;c1&#34;&gt;
+                   &lt;button id=&#34;r3c1&#34;&gt; &lt;/button&gt;
+               &lt;/td&gt;
+               &lt;td class = &#34;c2&#34;&gt;
+                   &lt;button id=&#34;r3c2&#34;&gt; &lt;/button&gt;
+               &lt;/td&gt;
+               &lt;td class = &#34;c3&#34;&gt; 
+                   &lt;button id=&#34;r3c3&#34;&gt; &lt;/button&gt;
+               &lt;/td&gt;
+           &lt;/tr&gt;
+       &lt;/table&gt;
+   &lt;/div&gt;
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Final Code" duration="2">
+        <p>Here&#39;s everything we programmed today:</p>
+<pre><code language="language-html" class="language-html">{
+      &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+
+  &lt;head&gt;
+    &lt;title&gt;Tic-Tac-Toe&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1 id=&#34;title&#34;&gt; Tic Tac Toe!&lt;/h1&gt;
+    &lt;h5 id = &#34;directions&#34;&gt; You will be playing as X. To place an X, click on the tile you want to choose.&lt;/h5&gt;
+    &lt;div id = &#34;enclosed&#34;&gt;
+      &lt;div id=&#34;results&#34;&gt;
+            &lt;p id=&#34;wins&#34;&gt;Wins: 0&lt;/p&gt;
+            &lt;p id=&#34;losses&#34;&gt;Losses: 0&lt;/p&gt;
+            &lt;p id=&#34;ties&#34;&gt;Ties: 0&lt;/p&gt;
+            &lt;button id=&#34;reset&#34;&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;background&#34;&gt;
+        &lt;table id=&#34;table&#34;&gt;
+            &lt;tr id = &#34;r1&#34;&gt;
+                &lt;td class = &#34;c1&#34;&gt;
+                    &lt;button id=r1c1&gt; &lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class = &#34;c2&#34;&gt;
+                    &lt;button id=r1c2&gt; &lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class = &#34;c3&#34;&gt;
+                    &lt;button id=r1c3&gt; &lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr id = &#34;r2&#34;&gt;
+                &lt;td class = &#34;c1&#34;&gt;
+                    &lt;button id=r2c1&gt; &lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class = &#34;c2&#34;&gt;
+                    &lt;button id=r2c2&gt; &lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class = &#34;c3&#34;&gt;
+                    &lt;button id=r2c3&gt; &lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr id = &#34;r3&#34;&gt;
+                &lt;td class = &#34;c1&#34;&gt;
+                    &lt;button id=r3c1&gt; &lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class = &#34;c2&#34;&gt;
+                    &lt;button id=r3c2&gt; &lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class = &#34;c3&#34;&gt; 
+                    &lt;button id=r3c3&gt; &lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/body&gt;
+  &lt;/html&gt;
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Other Suggestions" duration="2">
+        <p>There are many, many other cool things you can do in HTML and I&#39;ll give some examples here:</p>
+<ul>
+<li>You can use the &lt;‘img&#39;&gt; tag to add an image to your game, or use it to represent a button in a cool way <code><'img src = "someImg.jpg alt = "Some image"'></code></li>
+<li>There are many different uses of the &lt;‘input&#39;&gt; tag, many of which can be <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">found here</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
