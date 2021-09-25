@@ -43,6 +43,7 @@
       </google-codelab-step>
     
       <google-codelab-step label="Starting our HTML File" duration="7">
+        <p>First, you should create a file in any IDE or text editor and save the file as ".html"</p>
         <p>The first thing you want to put on your HTML file is &lt;&#39;!DOCTYPE html&#39;&gt;. This will declare the document type and tells the browser how to render the web page. Next you want to add &lt;‘html&#39;&gt;,&lt;‘head&#39;&gt;, and &lt;‘body&#39;&gt; tags underneath. Tags should be closed with &lt;&#39;/element&#39;&gt; for every element We also want to add a title inside the &lt;‘head&#39;&gt; container like this: &lt;‘title&#39;&gt;Tic-Tac-Toe&lt;&#39;/title&#39;&gt; In the future, the head will also include links to our CSS and JS files, but we&#39;ll add those when we need them</p>
 <p>Your file should look like this so far:</p>
 <pre><code language="language-html" class="language-html">
@@ -72,10 +73,10 @@
 </ul>
 <p>In this situation, I&#39;ll be using an h1 tag and h5 tag, but you can choose which tags you want to use if you feel a different tag looks better.</p>
 <p>At the top of the body tag I have the name and some directions:</p>
-<pre><code language="language-html" class="language-html">{
+<pre><code language="language-html" class="language-html">
   &lt;h1&gt; Tic Tac Toe!&lt;/h1&gt;
   &lt;h5&gt; You will be playing as X. To place an X, click on the tile you want to choose.&lt;/h5&gt;
-}
+
 </code></pre>
 <h2 is-upgraded>Using Ids and Classes</h2>
 <p>Ids and Classes are incredibly important to add to HTML elements because they help in the future when you want to reference certain elements of your webpage either to improve the style, change the text, add a child, and many other functions. They&#39;ll be especially useful when we implement CSS and Javascript in the future.</p>
@@ -85,12 +86,12 @@
 <pre><code language="language-html" class="language-html">
  &lt;h1 id=&#34;title&#34;&gt; Tic Tac Toe&lt;/h1&gt;
  &lt;h5 id = &#34;directions&#34;&gt; You will be playing as X. To place an X, click on the tile you want to choose.&lt;/h5&gt;
-}
+
 </code></pre>
 <h2 is-upgraded>Using Div</h2>
 <p>The div tag acts as division between different sections of your webpage. Suppose you only want a certain part of your project to be referenced or styled in a different way than the rest of the body. The div tag allows you to do that. I&#39;m going to add a div tag to store all the rest of our code.</p>
 <p>Your code should look similar to this:</p>
-<pre><code language="language-html" class="language-html">{
+<pre><code language="language-html" class="language-html">
   &lt;!DOCTYPE html&gt;
   &lt;html&gt;
 
